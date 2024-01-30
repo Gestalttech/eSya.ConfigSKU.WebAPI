@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\eSya.ConfigSKU.WebAPI.props" />
+</Project>

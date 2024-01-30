@@ -1,0 +1,15 @@
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\bin\Debug\net6.0\eSya.ConfigSKU.IF.deps.json
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\bin\Debug\net6.0\eSya.ConfigSKU.IF.dll
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\bin\Debug\net6.0\eSya.ConfigSKU.IF.pdb
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\bin\Debug\net6.0\eSya.ConfigSKU.DO.dll
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\bin\Debug\net6.0\eSya.ConfigSKU.DO.pdb
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\eSya.ConfigSKU.IF.csproj.AssemblyReference.cache
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\eSya.ConfigSKU.IF.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\eSya.ConfigSKU.IF.AssemblyInfoInputs.cache
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\eSya.ConfigSKU.IF.AssemblyInfo.cs
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\eSya.ConfigSKU.IF.csproj.CoreCompileInputs.cache
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\eSya.ConfigSKU.IF.csproj.CopyComplete
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\eSya.ConfigSKU.IF.dll
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\refint\eSya.ConfigSKU.IF.dll
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\eSya.ConfigSKU.IF.pdb
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\ref\eSya.ConfigSKU.IF.dll
