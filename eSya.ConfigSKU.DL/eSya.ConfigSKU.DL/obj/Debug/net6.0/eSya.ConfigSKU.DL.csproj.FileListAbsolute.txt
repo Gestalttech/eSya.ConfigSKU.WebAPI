@@ -17,3 +17,4 @@ D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.DL\eSya.Config
 D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.DL\eSya.ConfigSKU.DL\obj\Debug\net6.0\eSya.ConfigSKU.DL.pdb
 D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.DL\eSya.ConfigSKU.DL\obj\Debug\net6.0\eSya.ConfigSKU.DL.genruntimeconfig.cache
 D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.DL\eSya.ConfigSKU.DL\obj\Debug\net6.0\ref\eSya.ConfigSKU.DL.dll
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.DL\eSya.ConfigSKU.DL\obj\Debug\net6.0\eSya.ConfigSKU.DL.sourcelink.json

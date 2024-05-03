@@ -78,7 +78,7 @@ namespace eSya.ConfigSKU.DL.Repository
                             var RecordExist = db.GtEiitgrs.Where(w => w.ItemGroupDesc == obj.ItemGroupDesc).Count();
                             if (RecordExist > 0)
                             {
-                                return new DO_ReturnParameter() { Status = false, StatusCode = "W0091", Message = string.Format(_localizer[name: "W0091"]) };
+                                return new DO_ReturnParameter() { Status = false, StatusCode = "W0118", Message = string.Format(_localizer[name: "W0118"]) };
                             }
                             else
                             {
@@ -107,7 +107,7 @@ namespace eSya.ConfigSKU.DL.Repository
                                 var LinkExist = db.GtEiitgcs.Where(w => w.ItemGroup == obj.ItemGroupId && w.ActiveStatus).Count();
                                 if (LinkExist > 0)
                                 {
-                                    return new DO_ReturnParameter() { Status = false, StatusCode = "W0092", Message = string.Format(_localizer[name: "W0092"]) };
+                                    return new DO_ReturnParameter() { Status = false, StatusCode = "W0119", Message = string.Format(_localizer[name: "W0119"]) };
                                 }
                             }
                             var updatedItemGroup = db.GtEiitgrs.Where(w => w.ItemGroup == obj.ItemGroupId).FirstOrDefault();
@@ -116,7 +116,7 @@ namespace eSya.ConfigSKU.DL.Repository
                                 var RecordExist = db.GtEiitgrs.Where(w => w.ItemGroupDesc == obj.ItemGroupDesc).Count();
                                 if (RecordExist > 0)
                                 {
-                                    return new DO_ReturnParameter() { Status = false, StatusCode = "W0093", Message = string.Format(_localizer[name: "W0093"]) };
+                                    return new DO_ReturnParameter() { Status = false, StatusCode = "W0120", Message = string.Format(_localizer[name: "W0120"]) };
                                 }
 
                             }
@@ -190,7 +190,7 @@ namespace eSya.ConfigSKU.DL.Repository
                             var RecordExist = db.GtEiitcts.Where(w => w.ItemCategoryDesc == obj.ItemCategoryDesc).Count();
                             if (RecordExist > 0)
                             {
-                                return new DO_ReturnParameter() { Status = false, StatusCode = "W0094", Message = string.Format(_localizer[name: "W0094"]) };
+                                return new DO_ReturnParameter() { Status = false, StatusCode = "W0121", Message = string.Format(_localizer[name: "W0121"]) };
                             }
                             else
                             {
@@ -223,7 +223,7 @@ namespace eSya.ConfigSKU.DL.Repository
                                 var LinkExist = db.GtEiitgcs.Where(w => w.ItemCategory == obj.ItemCategory && w.ActiveStatus).Count();
                                 if (LinkExist > 0)
                                 {
-                                    return new DO_ReturnParameter() { Status = false, StatusCode = "W0095", Message = string.Format(_localizer[name: "W0095"]) };
+                                    return new DO_ReturnParameter() { Status = false, StatusCode = "W0122", Message = string.Format(_localizer[name: "W0122"]) };
                                 }
                             }
 
@@ -233,7 +233,7 @@ namespace eSya.ConfigSKU.DL.Repository
                                 var RecordExist = db.GtEiitcts.Where(w => w.ItemCategoryDesc == obj.ItemCategoryDesc).Count();
                                 if (RecordExist > 0)
                                 {
-                                    return new DO_ReturnParameter() { Status = false, StatusCode = "W0094", Message = string.Format(_localizer[name: "W0094"]) };
+                                    return new DO_ReturnParameter() { Status = false, StatusCode = "W0121", Message = string.Format(_localizer[name: "W0121"]) };
                                 }
                             }
                             updatedItemCategory.ItemCategoryDesc = obj.ItemCategoryDesc;
@@ -308,7 +308,7 @@ namespace eSya.ConfigSKU.DL.Repository
                             var RecordExist = db.GtEiitscs.Where(w => w.ItemSubCategoryDesc == obj.ItemSubCategoryDesc && w.ItemCategory == obj.ItemCategory).Count();
                             if (RecordExist > 0)
                             {
-                                return new DO_ReturnParameter() { Status = false, StatusCode = "W0096", Message = string.Format(_localizer[name: "W0096"]) };
+                                return new DO_ReturnParameter() { Status = false, StatusCode = "W0123", Message = string.Format(_localizer[name: "W0123"]) };
                             }
                             else
                             {
@@ -336,7 +336,7 @@ namespace eSya.ConfigSKU.DL.Repository
                                 var LinkExist = db.GtEiitgcs.Where(w => w.ItemCategory == obj.ItemCategory && w.ActiveStatus).Count();
                                 if (LinkExist > 0)
                                 {
-                                    return new DO_ReturnParameter() { Status = false, StatusCode = "W0097", Message = string.Format(_localizer[name: "W0097"]) };
+                                    return new DO_ReturnParameter() { Status = false, StatusCode = "W0124", Message = string.Format(_localizer[name: "W0124"]) };
                                 }
                             }
                             var updatedItemSubCategory = db.GtEiitscs.Where(w => w.ItemSubCategory == obj.ItemSubCategory).FirstOrDefault();
@@ -345,7 +345,7 @@ namespace eSya.ConfigSKU.DL.Repository
                                 var RecordExist = db.GtEiitscs.Where(w => w.ItemSubCategoryDesc == obj.ItemSubCategoryDesc && w.ItemCategory == obj.ItemCategory).Count();
                                 if (RecordExist > 0)
                                 {
-                                    return new DO_ReturnParameter() { Status = false, StatusCode = "W0098", Message = string.Format(_localizer[name: "W0098"]) };
+                                    return new DO_ReturnParameter() { Status = false, StatusCode = "W0125", Message = string.Format(_localizer[name: "W0125"]) };
                                 }
                             }
                             updatedItemSubCategory.ItemCategory = obj.ItemCategory;
@@ -447,7 +447,7 @@ namespace eSya.ConfigSKU.DL.Repository
                             var RecordExist = db.GtEiitgcs.Where(w => w.ItemGroup == obj.ItemGroupID && w.ItemCategory == obj.ItemCategory && w.ItemSubCategory == obj.ItemSubCategory).Count();
                             if (RecordExist > 0)
                             {
-                                return new DO_ReturnParameter() { Status = false, StatusCode = "W0099", Message = string.Format(_localizer[name: "W0099"]) };
+                                return new DO_ReturnParameter() { Status = false, StatusCode = "W0126", Message = string.Format(_localizer[name: "W0126"]) };
                             }
                             else
                             {

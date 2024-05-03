@@ -1,13 +1,13 @@
 {
-  "W0091": "Item Group is already Exist",
-  "W0092": "This Item Group is linked to an Item Category. Please unlink it before deactivating",
-  "W0093": "Item Group Description is already Exist",
-  "W0094": "Item Category is already Exist",
-  "W0095": "This Item Catergory is linked to an Item Group. Please unlink it before deactivating",
-  "W0096": "Item Sub Category is already Exist",
-  "W0097": "This Sub Catergory is linked to an Item Group. Please unlink it before deactivating",
-  "W0098": "Item Sub Category Description is already Exist",
-  "W0099": "Already Linked",
+  "W0118": "Item Group is already Exist",
+  "W0119": "This Item Group is linked to an Item Category. Please unlink it before deactivating",
+  "W0120": "Item Group Description is already Exist",
+  "W0121": "Item Category is already Exist",
+  "W0122": "This Item Catergory is linked to an Item Group. Please unlink it before deactivating",
+  "W0123": "Item Sub Category is already Exist",
+  "W0124": "This Sub Catergory is linked to an Item Group. Please unlink it before deactivating",
+  "W0125": "Item Sub Category Description is already Exist",
+  "W0126": "Already Linked",
 
 
   "S0001": "Saved Sucessfully",
