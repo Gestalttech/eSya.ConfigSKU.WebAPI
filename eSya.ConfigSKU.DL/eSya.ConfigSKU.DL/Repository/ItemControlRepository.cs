@@ -428,6 +428,7 @@ namespace eSya.ConfigSKU.DL.Repository
                         ItemSubCategoryDesc = s.sc.ItemSubCategoryDesc,
                         ActiveStatus = s.gc.ActiveStatus
 
+
                     }).Distinct().ToListAsync();
 
                 return await result;
@@ -461,6 +462,7 @@ namespace eSya.ConfigSKU.DL.Repository
                                     OriginalBudgetAmount = obj.BudgetAmount,
                                     RevisedBudgetAmount = obj.BudgetAmount,
                                     ComittmentAmount = obj.CommittmentAmount,
+                                    Fastatus=obj.Fastatus,
                                     ActiveStatus = obj.ActiveStatus,
                                     FormId = obj.FormID,
                                     CreatedBy = obj.UserID,
@@ -479,6 +481,7 @@ namespace eSya.ConfigSKU.DL.Repository
                             var updatedMappingRecord = db.GtEiitgcs.Where(w => w.ItemGroup == obj.ItemGroupID && w.ItemCategory == obj.ItemCategory && w.ItemSubCategory == obj.ItemSubCategory).FirstOrDefault();
                             updatedMappingRecord.RevisedBudgetAmount = obj.BudgetAmount;
                             updatedMappingRecord.ComittmentAmount = obj.CommittmentAmount;
+                            updatedMappingRecord.Fastatus = obj.Fastatus;
                             updatedMappingRecord.ActiveStatus = obj.ActiveStatus;
                             updatedMappingRecord.FormId = obj.FormID;
                             updatedMappingRecord.ModifiedBy = obj.UserID;
@@ -510,6 +513,7 @@ namespace eSya.ConfigSKU.DL.Repository
                              {
                                  BudgetAmount = s.RevisedBudgetAmount,
                                  CommittmentAmount = s.ComittmentAmount,
+                                 Fastatus=s.Fastatus,
                                  ActiveStatus = s.ActiveStatus
                              }
                             ).FirstOrDefaultAsync();

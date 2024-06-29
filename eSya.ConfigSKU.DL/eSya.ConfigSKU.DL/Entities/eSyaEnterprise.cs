@@ -70,6 +70,8 @@ namespace eSya.ConfigSKU.DL.Entities
 
                 entity.Property(e => e.CreatedTerminal).HasMaxLength(50);
 
+                entity.Property(e => e.Fastatus).HasColumnName("FAStatus");
+
                 entity.Property(e => e.FormId)
                     .HasMaxLength(10)
                     .IsUnicode(false)
