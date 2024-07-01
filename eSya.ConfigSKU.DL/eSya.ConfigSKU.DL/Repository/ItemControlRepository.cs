@@ -452,7 +452,11 @@ namespace eSya.ConfigSKU.DL.Repository
                             }
                             else
                             {
-
+                                bool isautomated = db.GtEcaprls.Any(x => x.ProcessId == 6 && x.RuleId == 2 && x.ActiveStatus && obj.ItemGroupID == 1);
+                                if (isautomated)
+                                {
+                                    obj.Fastatus = true;
+                                }
 
                                 var mappingrecord = new GtEiitgc
                                 {
@@ -462,7 +466,7 @@ namespace eSya.ConfigSKU.DL.Repository
                                     OriginalBudgetAmount = obj.BudgetAmount,
                                     RevisedBudgetAmount = obj.BudgetAmount,
                                     ComittmentAmount = obj.CommittmentAmount,
-                                    Fastatus=obj.Fastatus,
+                                    Fastatus = obj.Fastatus,
                                     ActiveStatus = obj.ActiveStatus,
                                     FormId = obj.FormID,
                                     CreatedBy = obj.UserID,
@@ -471,11 +475,29 @@ namespace eSya.ConfigSKU.DL.Repository
 
                                 };
                                 db.GtEiitgcs.Add(mappingrecord);
+                                await db.SaveChangesAsync();
 
+                                var ast_Exists = db.GtEcfxags.Where(x => x.AssetGroup == obj.ItemCategory && x.AssetSubGroup == obj.ItemSubCategory).FirstOrDefault();
+                                if (ast_Exists == null)
+                                {
+                                    var asst = new GtEcfxag
+                                    {
+                                        AssetGroup = obj.ItemCategory,
+                                        AssetSubGroup = obj.ItemSubCategory,
+                                        ActiveStatus = obj.ActiveStatus,
+                                        FormId = obj.FormID,
+                                        CreatedBy = obj.UserID,
+                                        CreatedOn = System.DateTime.Now,
+                                        CreatedTerminal = obj.TerminalID
+                                    };
+                                    db.GtEcfxags.Add(asst);
+                                    await db.SaveChangesAsync();
+
+                                }
+                               
 
                             }
                         }
-
                         else if (obj.flag == 1)
                         {
                             var updatedMappingRecord = db.GtEiitgcs.Where(w => w.ItemGroup == obj.ItemGroupID && w.ItemCategory == obj.ItemCategory && w.ItemSubCategory == obj.ItemSubCategory).FirstOrDefault();
@@ -487,9 +509,18 @@ namespace eSya.ConfigSKU.DL.Repository
                             updatedMappingRecord.ModifiedBy = obj.UserID;
                             updatedMappingRecord.ModifiedOn = obj.CreatedOn;
                             updatedMappingRecord.ModifiedTerminal = obj.TerminalID;
+                            await db.SaveChangesAsync();
+                            var astt_Exists = db.GtEcfxags.Where(x => x.AssetGroup == obj.ItemCategory && x.AssetSubGroup == obj.ItemSubCategory).FirstOrDefault();
+                            if (astt_Exists != null)
+                            {
+                                astt_Exists.ActiveStatus = obj.ActiveStatus;
+                                astt_Exists.ModifiedBy = obj.UserID;
+                                astt_Exists.ModifiedOn = System.DateTime.Now;
+                                astt_Exists.ModifiedTerminal = obj.TerminalID;
+                            }
+                            await db.SaveChangesAsync();
                         }
 
-                        await db.SaveChangesAsync();
                         dbContext.Commit();
                         return new DO_ReturnParameter() { Status = true, StatusCode = "S0001", Message = string.Format(_localizer[name: "S0001"]) };
                     }

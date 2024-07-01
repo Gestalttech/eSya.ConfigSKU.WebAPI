@@ -18,6 +18,8 @@ namespace eSya.ConfigSKU.DL.Entities
         {
         }
 
+        public virtual DbSet<GtEcaprl> GtEcaprls { get; set; } = null!;
+        public virtual DbSet<GtEcfxag> GtEcfxags { get; set; } = null!;
         public virtual DbSet<GtEiitct> GtEiitcts { get; set; } = null!;
         public virtual DbSet<GtEiitgc> GtEiitgcs { get; set; } = null!;
         public virtual DbSet<GtEiitgr> GtEiitgrs { get; set; } = null!;
@@ -34,6 +36,54 @@ namespace eSya.ConfigSKU.DL.Entities
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<GtEcaprl>(entity =>
+            {
+                entity.HasKey(e => new { e.RuleId, e.ProcessId });
+
+                entity.ToTable("GT_ECAPRL");
+
+                entity.Property(e => e.RuleId).HasColumnName("RuleID");
+
+                entity.Property(e => e.ProcessId).HasColumnName("ProcessID");
+
+                entity.Property(e => e.CreatedOn).HasColumnType("datetime");
+
+                entity.Property(e => e.CreatedTerminal).HasMaxLength(50);
+
+                entity.Property(e => e.FormId)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("FormID");
+
+                entity.Property(e => e.ModifiedOn).HasColumnType("datetime");
+
+                entity.Property(e => e.ModifiedTerminal).HasMaxLength(50);
+
+                entity.Property(e => e.Notes).HasMaxLength(1000);
+
+                entity.Property(e => e.RuleDesc).HasMaxLength(500);
+            });
+
+            modelBuilder.Entity<GtEcfxag>(entity =>
+            {
+                entity.HasKey(e => new { e.AssetGroup, e.AssetSubGroup });
+
+                entity.ToTable("GT_ECFXAG");
+
+                entity.Property(e => e.CreatedOn).HasColumnType("datetime");
+
+                entity.Property(e => e.CreatedTerminal).HasMaxLength(50);
+
+                entity.Property(e => e.FormId)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("FormID");
+
+                entity.Property(e => e.ModifiedOn).HasColumnType("datetime");
+
+                entity.Property(e => e.ModifiedTerminal).HasMaxLength(50);
+            });
+
             modelBuilder.Entity<GtEiitct>(entity =>
             {
                 entity.HasKey(e => e.ItemCategory);

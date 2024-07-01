@@ -13,3 +13,4 @@ D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.Config
 D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\refint\eSya.ConfigSKU.IF.dll
 D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\eSya.ConfigSKU.IF.pdb
 D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\ref\eSya.ConfigSKU.IF.dll
+D:\Projects\eSyaProjects2022\eSya.ConfigSKU.WebAPI\eSya.ConfigSKU.IF\eSya.ConfigSKU.IF\obj\Debug\net6.0\eSya.ConfigSKU.IF.sourcelink.json
