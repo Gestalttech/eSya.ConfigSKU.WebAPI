@@ -480,18 +480,22 @@ namespace eSya.ConfigSKU.DL.Repository
                                 var ast_Exists = db.GtEcfxags.Where(x => x.AssetGroup == obj.ItemCategory && x.AssetSubGroup == obj.ItemSubCategory).FirstOrDefault();
                                 if (ast_Exists == null)
                                 {
-                                    var asst = new GtEcfxag
+                                    if (isautomated)
                                     {
-                                        AssetGroup = obj.ItemCategory,
-                                        AssetSubGroup = obj.ItemSubCategory,
-                                        ActiveStatus = obj.ActiveStatus,
-                                        FormId = obj.FormID,
-                                        CreatedBy = obj.UserID,
-                                        CreatedOn = System.DateTime.Now,
-                                        CreatedTerminal = obj.TerminalID
-                                    };
-                                    db.GtEcfxags.Add(asst);
-                                    await db.SaveChangesAsync();
+                                        var asst = new GtEcfxag
+                                        {
+                                            AssetGroup = obj.ItemCategory,
+                                            AssetSubGroup = obj.ItemSubCategory,
+                                            ActiveStatus = obj.ActiveStatus,
+                                            FormId = obj.FormID,
+                                            CreatedBy = obj.UserID,
+                                            CreatedOn = System.DateTime.Now,
+                                            CreatedTerminal = obj.TerminalID
+                                        };
+                                        db.GtEcfxags.Add(asst);
+                                        await db.SaveChangesAsync();
+                                    }
+                                    
 
                                 }
                                
@@ -513,12 +517,19 @@ namespace eSya.ConfigSKU.DL.Repository
                             var astt_Exists = db.GtEcfxags.Where(x => x.AssetGroup == obj.ItemCategory && x.AssetSubGroup == obj.ItemSubCategory).FirstOrDefault();
                             if (astt_Exists != null)
                             {
-                                astt_Exists.ActiveStatus = obj.ActiveStatus;
-                                astt_Exists.ModifiedBy = obj.UserID;
-                                astt_Exists.ModifiedOn = System.DateTime.Now;
-                                astt_Exists.ModifiedTerminal = obj.TerminalID;
+                                bool isautomated = db.GtEcaprls.Any(x => x.ProcessId == 6 && x.RuleId == 2 && x.ActiveStatus && obj.ItemGroupID == 1);
+
+                                if (isautomated)
+                                {
+                                    astt_Exists.ActiveStatus = obj.ActiveStatus;
+                                    astt_Exists.ModifiedBy = obj.UserID;
+                                    astt_Exists.ModifiedOn = System.DateTime.Now;
+                                    astt_Exists.ModifiedTerminal = obj.TerminalID;
+                                    await db.SaveChangesAsync();
+                                }
+                                
                             }
-                            await db.SaveChangesAsync();
+                           
                         }
 
                         dbContext.Commit();
